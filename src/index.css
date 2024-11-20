@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gold-font {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;  
+  font-family: "Playfair Display";
+  background: linear-gradient(to bottom, #ffd700 27%, #ffecb3 40%, #ffb700 78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+  }
+
+
+
+  .gold-menu {
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;  
+  background: linear-gradient(to bottom, #ffe100 27%, #ffecb3 40%, #ffb300 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  }
+
+  .gold-menu:hover {
+  background: linear-gradient(to bottom, #ffecb3 27%, #ffe100 40%, #ff4000 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  * {
+  box-sizing: border-box;
+  }
+
+  :root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+  }
+
+  body {
+  margin: 0;
+  }
+
+  .wrapper {
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+  height: 25vh;
+  }
+
+  .wrapper > div {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: linear-gradient(to bottom, #ffe100 27%, #ffecb3 40%, #ff9900 78%);
+  font-family: unset;
+  font-weight: 900;
+  font-size: clamp(1em, 10vw, 8rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+  }
+
+  div.bg, div.fg {
+  background-image: repeating-linear-gradient(105deg, var(--gold) 0%, var(--dark-shadow) 5%, var(--gold) 12%);
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+  }
+
+  div.fg {
+  background-image: repeating-linear-gradient(to bottom, #ffe100 27%, #ffecb3 40%, #ffb300 78%);
+  transform: scale(1);
+  }
+
+
